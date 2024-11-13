@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda de Ropa en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <div class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <a href="index.html"> <img src="img/logo-header.png" alt="LZ Logo" id="logo-image" /></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="man.html">hombre</a></li>
+                    <li><a href="woman.html">mujer</a></li>
+                    <li><a href="#accesory">accesorios</a></li>
+                    <li><a href="#activismo">activismo</a></li>
+                    <li><a href="#sale">sale</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="/frontend/public/login.html" class="icon-button login-icon">
+                  <i class="fas fa-user"></i>
+                </a>
+                <!-- Botón de perfil (se mostrará cuando el usuario esté autenticado) -->
+                <a
+                  href="/frontend/public/dashboard.html"
+                  class="icon-button profile-icon"
+                  style="display: none"
+                >
+                  <i class="fas fa-user-circle"></i> Mi Perfil
+                </a>
+                <a href="#search" class="icon-button"
+                  ><i class="fas fa-search"></i
+                ></a>
+                <a href="#cart" class="icon-button"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="frase-inspiracional">
+            <div class="inspirational-content">
+                <a href="man.html" class="category-button">hombre</a>
+                <a href="woman.html" class="category-button">mujer</a>
+            </div>
+        </section>
+
+        <section id="categorias">
+            <div id="hombre" class="category-item">
+               <h2>Hombre</h2>
+            </div>
+            <div id="mujer" class="category-item">
+                <h2>Mujer</h2>
+            </div>
+            <div id="accesorios" class="category-item">
+                <h2>Accesorios</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <div class="footer-section-content">
+                    <p>320 447 64 24</p>
+                    <p>Escríbenos tu PQRS</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>QUIÉNES SOMOS</h3>
+                <div class="footer-section-content">
+                    <p>Cultura</p>
+                    <p>Trabaja aquí</p>
+                    <p>La vida en L2</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <div class="footer-section-content">
+                    <p>Envíos</p>
+                    <p>Seguimiento pedidos</p>
+                    <p>Preguntas frecuentes</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>SÍGUENOS</h3>
+                <div class="footer-section-content social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-logo">
+                    <img src="img/logo-header.png" alt="Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Términos y condiciones</a> | 
+                    <a href="#">Política de Privacidad</a> | 
+                    <a href="#">Superintendencia</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 L2 GROUP S.A.S.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+<a href="https://wa.me/+573204476424" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text">Comprar</span>
+</a>
+</body>
+</html>

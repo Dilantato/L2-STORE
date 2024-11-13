@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Tienda de Ropa en Línea</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo-header.png" alt="LZ Logo" id="logo-image" /></a>
+
+      </div>
+      <nav>
+        <ul>
+            <li><a href="man.html">hombre</a></li>
+            <li><a href="woman.html">mujer</a></li>
+            <li><a href="#accesory">accesorios</a></li>
+          <li><a href="#activismo">activismo</a></li>
+          <li><a href="#sale">sale</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="/frontend/public/login.html" class="icon-button login-icon">
+          <i class="fas fa-user"></i>
+        </a>
+        <!-- Botón de perfil (se mostrará cuando el usuario esté autenticado) -->
+        <a
+          href="/frontend/public/dashboard.html"
+          class="icon-button profile-icon"
+          style="display: none"
+        >
+          <i class="fas fa-user-circle"></i> Mi Perfil
+        </a>
+        <a href="#search" class="icon-button"
+          ><i class="fas fa-search"></i
+        ></a>
+        <a href="#cart" class="icon-button"
+          ><i class="fas fa-shopping-cart"></i
+        ></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories Grid Header -->
+  <div class="subcategories-container">
+    <div class="subcategories-grid">
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-tshirt"></i>
+        <span>Básicos</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-vest"></i>
+        <span>Cargo</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-paint-brush"></i>
+        <span>Denim</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-hat-cowboy"></i>
+        <span>Graficos</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-socks"></i>
+        <span>Headwear</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-ruler-vertical"></i>
+        <span>Oversize</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Ropa para hombre</h1>
+    <p>Ropa de hombre en nuestro sitio web y tiendas del país.</p>
+  </div>
+
+  <main class="container-grid-layout">
+    <!-- Main Content -->
+    <div class="content-wrapper">
+      <!-- Filters Sidebar -->
+      <aside class="filters-sidebar">
+        <!-- Categories Filter -->
+        <div class="filter-section">
+          <h3>Categoría</h3>
+          <ul class="filter-list">
+            <li><label><input type="checkbox"> Camisetas</label></li>
+            <li><label><input type="checkbox"> Shorts</label></li>
+            <li><label><input type="checkbox"> Tanks</label></li>
+            <li><label><input type="checkbox"> Pantalones</label></li>
+            <li><label><input type="checkbox"> Joggers</label></li>
+            <li><label><input type="checkbox"> Camisas</label></li>
+            <li><label><input type="checkbox"> Buzos</label></li>
+            <li><label><input type="checkbox"> Jeans</label></li>
+            <li><label><input type="checkbox"> Llaveros</label></li>
+            <li><label><input type="checkbox"> Gorras</label></li>
+            <li><label><input type="checkbox"> Pines</label></li>
+            <li><label><input type="checkbox"> Riñoneras</label></li>
+            <li><label><input type="checkbox"> Chaquetas</label></li>
+          </ul>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="filter-section">
+          <h3>Color</h3>
+          <div class="color-grid">
+            <button class="color-option" style="background-color: #00FF00;"></button>
+            <button class="color-option" style="background-color: #808080;"></button>
+            <button class="color-option" style="background-color: #000000;"></button>
+            <button class="color-option" style="background-color: #006400;"></button>
+            <button class="color-option" style="background-color: #A9A9A9;"></button>
+            <button class="color-option" style="background-color: #013220;"></button>
+            <button class="color-option" style="background-color: #8B4513;"></button>
+            <button class="color-option" style="background-color: #FF0000;"></button>
+          </div>
+        </div>
+
+        <!-- Size Filter -->
+        <div class="filter-section">
+          <h3>Talla</h3>
+          <ul class="filter-list">
+            <li><label><input type="checkbox"> S</label></li>
+            <li><label><input type="checkbox"> M</label></li>
+            <li><label><input type="checkbox"> L</label></li>
+            <li><label><input type="checkbox"> XL</label></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Products Section -->
+      <div class="products-section">
+        <div class="filters">
+          <div class="sort-by">
+            <label for="sort">Ordenar por:</label>
+            <select id="sort" name="sort">
+              <option value="relevance">Relevancia</option>
+              <option value="price-low">Precio: Menor a Mayor</option>
+              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="newest">Más recientes</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="product-grid">
+          <!-- Repeated 15 times for 5 rows x 3 columns -->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/saco-gris.jpg" alt="El Caballero Moderno">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">El Caballero Moderno</h3>
+              <p class="product-price">$199.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/blue-white.jpg" alt="Saco Heritage">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Heritage</h3>
+              <p class="product-price">$1199.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/suelto-gris.jpg" alt="Abrigo Urbano">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo Urbano</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/ojos.jpg" alt="Saco Velour">
+              <p class="hover-text">Tweed: Un tejido de lana que aporta una textura distintiva y un estilo elegante y robusto, perfecto para climas fríos.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Velour</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/dark.jpg" alt="Classic Kensington">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Classic Kensington</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/chaqueta.jpg" alt="Saco Supremo">
+              <p class="hover-text">De tejido fuerte y duradero, la gabardina es versátil y funciona bien en sacos para uso diario, gracias a su resistencia al desgaste.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Supremo</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/white.jpg" alt="Winter Luxe">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Winter Luxe</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/complete.jpg" alt="Abrigo Prestige">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo Prestige</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/complete2.jpg" alt="Saco Escocés">
+              <p class="hover-text">Tweed: Un tejido de lana que aporta una textura distintiva y un estilo elegante y robusto, perfecto para climas fríos.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Escocés</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/sue.jpg" alt="Abrigo Royal">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo Royal</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/crack.jpg" alt="The Urban Gent">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">The Urban Gent</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/gab.jpg" alt="Abrigo de Travesía">
+              <p class="hover-text">Gabardina: De tejido fuerte y duradero, la gabardina es versátil y funciona bien en sacos para uso diario, gracias a su resistencia al desgaste.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo de Travesía</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/soul.jpg" alt="Saco Vintage">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar. Además, es resistente a las manchas y duradero, ideal para quienes buscan un saco que luzca siempre perfecto.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Vintage</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/green.jpg" alt="Saco Marino">
+              <p class="hover-text">De tejido fuerte y duradero, la gabardina es versátil y funciona bien en sacos para uso diario, gracias a su resistencia al desgaste.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Marino</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/hombre/t-shirt.jpg" alt="Elegancia Capital">
+              <p class="hover-text">De tejido fuerte y duradero, la gabardina es versátil y funciona bien en sacos para uso diario, gracias a su resistencia al desgaste.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Elegancia Capital</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>CONTACTO</h3>
+        <div class="footer-section-content">
+          <p>320 447 64 24</p>
+          <p>Escríbenos tu PQRS</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>QUIÉNES SOMOS</h3>
+        <div class="footer-section-content">
+          <p>Cultura</p>
+          <p>Trabaja aquí</p>
+          <p>La vida en L2</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>AYUDA</h3>
+        <div class="footer-section-content">
+          <p>Envíos</p>
+          <p>Seguimiento pedidos</p>
+          <p>Preguntas frecuentes</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>SÍGUENOS</h3>
+        <div class="footer-section-content social-icons">
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-spotify"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-logo">
+          <img src="img/logo-header.png" alt="Logo" />
+        </div>
+        <div class="footer-links">
+          <a href="#">Términos y condiciones</a> |
+          <a href="#">Política de Privacidad</a> |
+          <a href="#">Superintendencia</a>
+        </div>
+        <div class="footer-copyright">© 2024 L2 GROUP S.A.S.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <a href="https://wa.me/+573204476424" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text">Comprar</span>
+</a>
+
+</body>
+
+</html>

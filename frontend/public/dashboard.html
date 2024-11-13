@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión iniciada -L2 STORE</title>
+    <link rel="stylesheet" href="styles.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <a href="index.html"> <img src="img/logo-header.png" alt="LZ Logo" id="logo-image" /></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="man.html">hombre</a></li>
+                    <li><a href="woman.html">mujer</a></li>
+                    <li><a href="accesory.html">accesorios</a></li>
+                    <li><a href="#tiendas">tiendas</a></li>
+                    <li><a href="#activismo">activismo</a></li>
+                    <li><a href="#sale">sale</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="http://127.0.0.1:5500/frontend/public/login.html" class="icon-button"><i class="fas fa-user"></i></a>
+                <a href="#search" class="icon-button"><i class="fas fa-search"></i></a>
+                <a href="#cart" class="icon-button"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="dashboard-container">
+        <!-- Sección de perfil -->
+        <div class="profile-section">
+            <div class="profile-image">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <span id="userEmail" class="user-email"></span>
+            <button onclick="logout()" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Cerrar Sesión
+            </button>
+        </div>
+
+        <!-- Sección de contenido -->
+        <div class="content-section">
+            <div class="welcome-card">
+                <h1>Bienvenido al Dashboard</h1>
+                <p>Has iniciado sesión correctamente!</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="stat-info">
+                        <h3>Clientes</h3>
+                        <p>1,234</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <div class="stat-info">
+                        <h3>Ventas/USD</h3>
+                        <p>5010</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <div class="stat-info">
+                        <h3>Órdenes</h3>
+                        <p>1,892</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <div class="footer-section-content">
+                    <p>340 447 64 24</p>
+                    <p>Escríbenos tu PQRS</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>QUIÉNES SOMOS</h3>
+                <div class="footer-section-content">
+                    <p>Cultura</p>
+                    <p>Trabaja aquí</p>
+                    <p>La vida en L2</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <div class="footer-section-content">
+                    <p>Envíos</p>
+                    <p>Seguimiento pedidos</p>
+                    <p>Preguntas frecuentes</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>SÍGUENOS</h3>
+                <div class="footer-section-content social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-logo">
+                    <img src="img/logo-header.png" alt="Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Términos y condiciones</a> | 
+                    <a href="#">Política de Privacidad</a> | 
+                    <a href="#">Superintendencia</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 L2 GROUP S.A.S.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mostrar el email del usuario
+        const userEmail = localStorage.getItem('userEmail');
+        if (userEmail) {
+            document.getElementById('userEmail').textContent = userEmail;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

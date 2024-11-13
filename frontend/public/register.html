@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda de Ropa en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-container">
+            <div class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <a href="index.html"> <img src="img/logo-header.png" alt="LZ Logo" id="logo-image" /></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="man.html">hombre</a></li>
+                    <li><a href="woman.html">mujer</a></li>
+                    <li><a href="accesory.html">accesorios</a></li>
+                    <li><a href="#tiendas">tiendas</a></li>
+                    <li><a href="#activismo">activismo</a></li>
+                    <li><a href="#sale">sale</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#login" class="icon-button"><i class="fas fa-user"></i></a>
+                <a href="#search" class="icon-button"><i class="fas fa-search"></i></a>
+                <a href="#cart" class="icon-button"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container-2">
+            <form id="registerForm" class="form-container">
+                <h1>Registro</h1>
+                
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        required
+                        placeholder="Ingresa tu nombre completo"
+                    >
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="Ingresa tu email"
+                    >
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        placeholder="Ingresa tu contraseña"
+                    >
+                </div>
+    
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp</label>
+                    <input 
+                        type="tel" 
+                        id="whatsapp" 
+                        name="whatsapp" 
+                        required
+                        placeholder="Ingresa tu número de WhatsApp"
+                    >
+                </div>
+    
+                <div class="form-group">
+                    <label for="birthDate">Fecha de Nacimiento</label>
+                    <input 
+                        type="date" 
+                        id="birthDate" 
+                        name="birthDate" 
+                        required
+                    >
+                </div>
+    
+                <button type="submit" class="submit-btn">Registrarse</button>
+                
+                <p class="login-link">
+                    ¿Ya tienes cuenta? <a href="/frontend/public/login.html">Iniciar Sesión</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <div class="footer-section-content">
+                    <p>340 447 64 24</p>
+                    <p>Escríbenos tu PQRS</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>QUIÉNES SOMOS</h3>
+                <div class="footer-section-content">
+                    <p>Cultura</p>
+                    <p>Trabaja aquí</p>
+                    <p>La vida en L2</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>AYUDA</h3>
+                <div class="footer-section-content">
+                    <p>Envíos</p>
+                    <p>Seguimiento pedidos</p>
+                    <p>Preguntas frecuentes</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>SÍGUENOS</h3>
+                <div class="footer-section-content social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-logo">
+                    <img src="img/logo-header.png" alt="Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Términos y condiciones</a> | 
+                    <a href="#">Política de Privacidad</a> | 
+                    <a href="#">Superintendencia</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 L2 GROUP S.A.S.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

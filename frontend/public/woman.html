@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Tienda de Ropa en Línea</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo-header.png" alt="LZ Logo" id="logo-image" /></a>
+
+      </div>
+      <nav>
+        <ul>
+          <li><a href="man.html">hombre</a></li>
+          <li><a href="woman.html">mujer</a></li>
+          <li><a href="#cosas">accesorios</a></li>
+          <li><a href="#activismo">activismo</a></li>
+          <li><a href="#sale">sale</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="/frontend/public/login.html" class="icon-button login-icon">
+          <i class="fas fa-user"></i>
+        </a>
+        <!-- Botón de perfil (se mostrará cuando el usuario esté autenticado) -->
+        <a
+          href="/frontend/public/dashboard.html"
+          class="icon-button profile-icon"
+          style="display: none"
+        >
+          <i class="fas fa-user-circle"></i> Mi Perfil
+        </a>
+        <a href="#search" class="icon-button"
+          ><i class="fas fa-search"></i
+        ></a>
+        <a href="#cart" class="icon-button"
+          ><i class="fas fa-shopping-cart"></i
+        ></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories Grid Header -->
+  <div class="subcategories-container">
+    <div class="subcategories-grid">
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-tshirt"></i>
+        <span>Básicos</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-vest"></i>
+        <span>Denim</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-paint-brush"></i>
+        <span>Gráficos</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-hat-cowboy"></i>
+        <span>Headwear</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-socks"></i>
+        <span>Pants</span>
+      </a>
+      <a href="#" class="subcategory-item">
+        <i class="fas fa-ruler-vertical"></i>
+        <span>Tejidos</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Ropa mujer</h1>
+    <p>Outfit onfire para mujer</p>
+  </div>
+
+  <main class="container-grid-layout">
+    <!-- Main Content -->
+    <div class="content-wrapper">
+      <!-- Filters Sidebar -->
+      <aside class="filters-sidebar">
+        <!-- Categories Filter -->
+        <div class="filter-section">
+          <h3>Categoría</h3>
+          <ul class="filter-list">
+            <li><label><input type="checkbox"> Camisetas</label></li>
+            <li><label><input type="checkbox"> Tops y Bodies</label></li>
+            <li><label><input type="checkbox"> Vestidos</label></li>
+            <li><label><input type="checkbox"> Shorts</label></li>
+            <li><label><input type="checkbox"> Pantalones</label></li>
+            <li><label><input type="checkbox"> Faldas</label></li>
+            <li><label><input type="checkbox"> Buzos</label></li>
+            <li><label><input type="checkbox"> Joggers</label></li>
+            <li><label><input type="checkbox"> Llaveros</label></li>
+            <li><label><input type="checkbox"> Pines</label></li>
+            <li><label><input type="checkbox"> Jeans</label></li>
+            <li><label><input type="checkbox"> Chaquetas</label></li>
+            <li><label><input type="checkbox"> Camisas</label></li>
+            <li><label><input type="checkbox"> Gorras</label></li>
+          </ul>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="filter-section">
+          <h3>Color</h3>
+          <div class="color-grid">
+            <button class="color-option" style="background-color: #00FF00;"></button>
+            <button class="color-option" style="background-color: #808080;"></button>
+            <button class="color-option" style="background-color: #000000;"></button>
+            <button class="color-option" style="background-color: #006400;"></button>
+            <button class="color-option" style="background-color: #A9A9A9;"></button>
+            <button class="color-option" style="background-color: #013220;"></button>
+            <button class="color-option" style="background-color: #8B4513;"></button>
+            <button class="color-option" style="background-color: #FF0000;"></button>
+          </div>
+        </div>
+
+        <!-- Size Filter -->
+        <div class="filter-section">
+          <h3>Talla</h3>
+          <ul class="filter-list">
+            <li><label><input type="checkbox"> S</label></li>
+            <li><label><input type="checkbox"> M</label></li>
+            <li><label><input type="checkbox"> L</label></li>
+            <li><label><input type="checkbox"> XL</label></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Products Section -->
+      <div class="products-section">
+        <div class="filters">
+          <div class="sort-by">
+            <label for="sort">Ordenar por:</label>
+            <select id="sort" name="sort">
+              <option value="relevance">Relevancia</option>
+              <option value="price-low">Precio: Menor a Mayor</option>
+              <option value="price-high">Precio: Mayor a Menor</option>
+              <option value="newest">Más recientes</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="product-grid">
+          <!-- Repeated 15 times for 5 rows x 3 columns -->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/saco1.jpg" alt="Saco Abejas">
+              <p class="hover-text">Tweed: Un tejido de lana,textura distintiva y estilo elegante y robusto, perfecto para climas fríos.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Abejas</h3>
+              <p class="product-price">$199.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/sin_mangas.jpg" alt="Elegancia Eterna">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Elegancia Eterna</h3>
+              <p class="product-price">$1199.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/black-white.jpg" alt="Abrigo Amalia">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo Amalia</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/cuello_alto.jpg" alt="Saco Winter Bloom">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Winter Bloom</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/semi.jpg" alt="Luxe Puro">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Luxe Puro</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/manos.jpg" alt="Abrigo Sofía">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo Sofía</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/cha_gan.jpg" alt="Abrigo Diva">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo Diva</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/color.jpg" alt="Saco Allegra">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Allegra</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/ga_white.jpg" alt="Essence">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Essence</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/who.jpg" alt="Saco Roselyn">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Saco Roselyn</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/cha_cos.jpg" alt="Abrigo de Luna">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo de Luna</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/pant.jpg" alt="Velour">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Velour</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/saco_blue.jpg" alt="Abrigo de Ensueño">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Abrigo de Ensueño</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/mar.jpg" alt="Classic Muse">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Classic Muse</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="img/falda.jpg" alt=" Zafiro">
+              <p class="hover-text">Twill: Con una trama diagonal, el twill es suave al tacto y fácil de planchar.</p>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Zafiro</h3>
+              <p class="product-price">$99.99</p>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>CONTACTO</h3>
+        <div class="footer-section-content">
+          <p>320 447 64 24</p>
+          <p>Escríbenos tu PQRS</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>QUIÉNES SOMOS</h3>
+        <div class="footer-section-content">
+          <p>Cultura</p>
+          <p>Trabaja aquí</p>
+          <p>La vida en L2</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>AYUDA</h3>
+        <div class="footer-section-content">
+          <p>Envíos</p>
+          <p>Seguimiento pedidos</p>
+          <p>Preguntas frecuentes</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>SÍGUENOS</h3>
+        <div class="footer-section-content social-icons">
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-spotify"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-logo">
+          <img src="img/logo-header.png" alt="Logo" />
+        </div>
+        <div class="footer-links">
+          <a href="#">Términos y condiciones</a> |
+          <a href="#">Política de Privacidad</a> |
+          <a href="#">Superintendencia</a>
+        </div>
+        <div class="footer-copyright">© 2024 L2 GROUP S.A.S.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <a href="https://wa.me/+573204476424" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-text">Comprar</span>
+</a>
+</body>
+
+</html>
